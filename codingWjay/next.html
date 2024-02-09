@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2</title>
+</head>
+<body>
+    <header  style="background-color: hsl(271, 100%, 80%);font-family: 'Times New Roman', Times, serif;">
+        <h1>Coding with me part2</h1>
+        <h4>Making a paragraph updater</h4>
+        <hr>
+    </header>
+    <main>
+        <p>
+            <input type="text" id="inputText" value="" style="font-size: 20px;font-family: 'Times New Roman', Times, serif;">
+            <button onclick="doUpdateParagraph();" style="background-color:hsl(295, 94%, 80%);font-size: 20px;font-family: 'Times New Roman', Times, serif;">Update this paragraph</button>
+            <p id="outputParagraph">This is what your updating</p>
+       
+        </p>
+        <script>
+            function doUpdateParagraph(){
+                var inputElement=document.getElementById("inputText");
+                var outputElement=document.getElementById("outputParagraph");
+                var message = inputElement.value;
+                outputElement.textContent=message;
+            }
+        </script>
+<hr>
+
+<h3>now lets make a timer down here</h3>
+<br>
+<audio id="alarmAudio"controls>
+<source src="alarm.mp3.mp3" type="audio/mpeg"></audio>
+<button onclick="doStartTimer();"style="background-color:hsl(295, 94%, 80%);font-size: 20px;font-family: 'Times New Roman', Times, serif;" >Start the timer</button>
+    <script>
+            function doStartTimer(){
+                setTimeout(doEndTimer,1*5*1000);
+            }
+            function doEndTimer(){
+                alarmSoundElement=document.getElementById("alarmAudio");
+                alarmSoundElement.play();
+            }
+           
+           
+    </script>
+    </main>
+    <br>
+    <footer style="background-color: hsl(271, 100%, 80%);font-family: 'Times New Roman', Times, serif;">
+        <hr>
+        author: Jhanniel<br>
+        &copy; 2024 copyright reserved</br>
+         
+        <hr>        
+    </footer>
+    <button onclick=location.href="next2.html" style="background-color:hsl(295, 94%, 80%); border-radius:7px;">Next page</button>
+</body>
+</html>
